@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="fr" class="!scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../img/avion.png" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <script type="module" src="https://unpkg.com/@material-tailwind/html@latest/scripts/popover.js"></script>
+    <script src="https://kit.fontawesome.com/d9276e1355.js" crossorigin="anonymous"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        nunito: ['Nunito', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif'],
+                    },
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Partir au Québec, Canada </title>
+</head>
+
+<body class="font-nunito">
+    <!-- NavBar -->
+    <nav class="bg-cyan-950 fixed w-full shadow z-50">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button id="mobile-menu-button" type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-cyan-700 hover:text-white 
+                    focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu"
+                        aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <!-- Icon when menu is closed. -->
+                        <svg class="block h-8 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!-- Icon when menu is open. -->
+                        <svg class="hidden h-8 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Logo -->
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div class="flex flex-shrink-0 items-center">
+                        <a href="../index.html"><img class="h-14 w-auto" src="../img/voyage(1).png" alt="logo"></a>
+                    </div>
+                    <!-- menu navbar -->
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-8">
+
+                            <a href="../index.html"
+                                class="rounded-md px-3 py-3 text-xl font-medium text-gray-300 hover:bg-cyan-800 hover:text-white">Mais,
+                                Pourquoi ?</a>
+
+                            <!-- DROPDOWN la préparation -->
+                            <button data-ripple-light="true" data-popover-target="menu1" class="select-none rounded-md py-3 text-xl font-medium 
+                        text-gray-300 hover:bg-cyan-800 hover:text-white transition-all ">
+                                La préparation
+                            </button>
+                            <ul role="menu" data-popover="menu1" data-popover-placement="bottom"
+                                class="absolute  min-w-[180px] overflow-auto rounded-md bg-cyan-950 text-blue-gray-500 shadow-lg">
+                                <a href="../prepa/index2-1.html">
+                                    <li role="menuitem" class="block w-full cursor-pointer select-none px-3 py-2 text-lg  text-gray-300 
+                                hover:bg-cyan-800 hover:text-white leading-tight transition-all">
+                                        Les prémices.
+                                    </li>
+                                </a>
+                                <a href="../prepa/index2-2.html">
+                                    <li role="menuitem" class="block w-full cursor-pointer select-none px-3 py-2 text-lg  text-gray-300 
+                                hover:bg-cyan-800 hover:text-white leading-tight transition-all">
+                                        Les réservations.
+                                    </li>
+                                </a>
+                            </ul>
+
+                            <!-- DROPDOWN Les voyages -->
+                            <button data-ripple-light="true" data-popover-target="menu2" class="select-none rounded-md py-3 text-xl font-medium 
+                        text-gray-300 hover:bg-cyan-800 hover:text-white transition-all ">
+                                Les voyages
+                            </button>
+                            <ul role="menu" data-popover="menu2" data-popover-placement="bottom"
+                                class="absolute  min-w-[180px] overflow-auto rounded-md bg-cyan-950 text-blue-gray-500 shadow-lg">
+                                <a href="../voyage/indexJapon.html">
+                                    <li role="menuitem" class="block w-full cursor-pointer select-none px-3 py-2 text-lg  text-gray-300 
+                                hover:bg-cyan-800 hover:text-white leading-tight transition-all">
+                                        Le Japon
+                                    </li>
+                                </a>
+                                <a href="../voyage/indexQuebec.html">
+                                    <li role="menuitem" class="block w-full cursor-pointer select-none px-3 py-2 text-lg  text-gray-300 
+                                hover:bg-cyan-800 hover:text-white leading-tight transition-all">
+                                        Le Québec.
+                                    </li>
+                                </a>
+                                <a href="../voyage/indexUAE.html">
+                                    <li role="menuitem" class="block w-full cursor-pointer select-none px-3 py-2 text-lg  text-gray-300 
+                                hover:bg-cyan-800 hover:text-white leading-tight transition-all">
+                                        Les Émirats.
+                                    </li>
+                                </a>
+                                <a href="../voyage/indexMali.html">
+                                    <li role="menuitem" class="block w-full cursor-pointer select-none px-3 py-2 text-lg  text-gray-300 
+                                hover:bg-cyan-800 hover:text-white leading-tight transition-all">
+                                        Le Mali.
+                                    </li>
+                                </a>
+                            </ul>
+
+                            <!--DROPDOWN Le prochain -->
+                            <button data-ripple-light="true" data-popover-target="menu3" class="elect-none rounded-md py-3 text-xl font-medium
+                        text-gray-300 hover:bg-cyan-800 hover:text-white transition-all hover:shadow-lg">
+                                La Suite ? </button>
+                            <ul role="menu" data-popover="menu3" data-popover-placement="bottom"
+                                class="absolute  min-w-[180px] overflow-auto rounded-md bg-cyan-950 text-blue-gray-500 shadow-lg">
+                                <a href="../next/htmlOu.html">
+                                    <li role="menuitem" class="block w-full cursor-pointer select-none px-3 py-2 text-lg  text-gray-300 
+                            hover:bg-cyan-800 hover:text-white leading-tight transition-all">
+                                        On part où ?
+                                    </li>
+                                </a>
+                                <a href="../next/htmlWhyNot.html">
+                                    <li role="menuitem" class="block w-full cursor-pointer select-none px-3 py-2 text-lg text-gray-300 
+                            hover:bg-cyan-800 hover:text-white leading-tight transition-all">
+                                        Pourquoi pas ?
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on menu state. -->
+        <div class="sm:hidden hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pb-3 pt-2">
+                <!-- DROPDOWN la préparation -->
+                <button data-ripple-light="true" data-popover-target="menu1" class="select-none rounded-md py-3 text-xl font-medium text-gray-300
+            hover:bg-cyan-800 hover:text-white transition-all hover:shadow-lg focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] 
+            active:shadow-none disabled:pointer-events-none">
+                    La préparation
+                </button>
+                <ul role="menu" data-popover="menu1" data-popover-placement="bottom" class="absolute  overflow-auto rounded-b-lg bg-cyan-950 
+            text-blue-gray-500 shadow-lg">
+                    <a href="../prepa/index2-1.html">
+                        <li role="menuitem" class="block w-full cursor-pointer select-none px-3 py-2 text-lg  text-gray-300 
+                                    hover:bg-cyan-800 hover:text-white leading-tight transition-all">
+                            Les prémices.
+                        </li>
+                    </a>
+                    <a href="../prepa/index2-2.html">
+                        <li role="menuitem" class="block w-full cursor-pointer select-none px-3 py-2 text-lg text-gray-300 
+                                    hover:bg-cyan-800 hover:text-white leading-tight transition-all">
+                            Les réservations.
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="space-y-1 px-2 pb-3 pt-2">
+
+                <!-- DROPDOWN Les voyages -->
+                <button data-ripple-light="true" data-popover-target="menu2" class="select-none rounded-md py-3 text-xl font-medium text-gray-300 
+            hover:bg-cyan-800 hover:text-whitetransition-all hover:shadow-lg focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] 
+            active:shadow-none disabled:pointer-events-none">
+                    Les voyages
+                </button>
+                <ul role="menu" data-popover="menu2" data-popover-placement="bottom"
+                    class="absolute  min-w-[180px] overflow-auto rounded-md bg-cyan-950 text-blue-gray-500 shadow-lg">
+                    <a href="../voyage/indexJapon.html">
+                        <li role="menuitem" class="block w-full cursor-pointer select-none px-3 py-2 text-lg  text-gray-300 
+                    hover:bg-cyan-800 hover:text-white leading-tight transition-all">
+                            Le Japon.
+                        </li>
+                    </a>
+                    <a href="../voyage/indexQuebec.html">
+                        <li role="menuitem" class="block w-full cursor-pointer select-none px-3 py-2 text-lg  text-gray-300 
+                    hover:bg-cyan-800 hover:text-white leading-tight transition-all">
+                            Le Québec.
+                        </li>
+                    </a>
+                    <a href="../voyage/indexUAE.html">
+                        <li role="menuitem" class="block w-full cursor-pointer select-none px-3 py-2 text-lg  text-gray-300 
+                    hover:bg-cyan-800 hover:text-white leading-tight transition-all">
+                            Les Émirats.
+                        </li>
+                    </a>
+                    <a href="../voyage/indexMali.html">
+                        <li role="menuitem" class="block w-full cursor-pointer select-none px-3 py-2 text-lg  text-gray-300 
+                    hover:bg-cyan-800 hover:text-white leading-tight transition-all">
+                            Le Mali.
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <!-- DROPDOWN La suite -->
+            <div class="space-y-1 px-2 pb-3 pt-2">
+                <button data-ripple-light="true" data-popover-target="menu3" class="select-none rounded-md py-3 text-xl font-medium text-gray-300 
+            hover:bg-cyan-800 hover:text-white transition-all hover:shadow-lg focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] 
+            active:shadow-none disabled:pointer-events-none">
+                    Le prochain?
+                </button>
+                <ul role="menu" data-popover="menu3" data-popover-placement="bottom" class="absolute  overflow-auto rounded-b-lg bg-cyan-950 
+            text-blue-gray-500 shadow-lg">
+                    <a href="../next/htmlOu.html">
+                        <li role="menuitem" class="block w-full cursor-pointer select-none px-3 py-2 text-lg  text-gray-300 
+                    hover:bg-cyan-800 hover:text-white leading-tight transition-all">
+                            On part où?
+                        </li>
+                    </a>
+                    <a href="../next/htmlWhyNot.html">
+                        <li role="menuitem" class="block w-full cursor-pointer select-none px-3 py-2 text-lg text-gray-300 
+                    hover:bg-cyan-800 hover:text-white leading-tight transition-all">
+                            Pourquoi pas?
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-16 bg-gradient-to-tr from-yellow-200 to-red-200  min-h-screen">
+        <section>
+            <h1 class="text-center text-cyan-950 font-bold text-4xl py-3 ">Les voyages : </h1>
+            <h1 class="text-center text-cyan-950 font-bold text-6xl py-3 ">Les francais du Canada, le Québec.</h1>
+
+            <!-- Caroussel -->
+            <div id="default-carousel" class="relative w-full mt-8  max-sm:px-10" data-carousel="slide">
+                <!-- Carousel wrapper -->
+                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                    <!-- Item 1 -->
+                    <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                        <img src="../img/quebec1.JPEG"
+                            class="absolute block w-full max-w-4xl -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="vue ile d'orleans">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                        <img src="../img/quebec2.JPEG"
+                            class="absolute block w-full max-w-4xl -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="chute Montmorency">
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                        <img src="../img/quebec3.JPEG"
+                            class="absolute block w-full max-w-4xl -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="baleines Tadoussac">
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                        <img src="../img/quebec4.JPEG"
+                            class="absolute block w-full max-w-4xl -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="hotel frontenac">
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="hidden duration-1000 ease-in-out" data-carousel-item>
+                        <img src="../img/quebec5.JPEG"
+                            class="absolute block w-full max-w-4xl -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                            alt="citrouille">
+                    </div>
+                </div>
+                <!-- Slider indicators -->
+                <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1"
+                        data-carousel-slide-to="0"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
+                        data-carousel-slide-to="1"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
+                        data-carousel-slide-to="2"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4"
+                        data-carousel-slide-to="3"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5"
+                        data-carousel-slide-to="4"></button>
+                </div>
+                <!-- Slider controls -->
+                <button type="button"
+                    class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none max-sm:hidden"
+                    data-carousel-prev>
+                    <span
+                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M5 1 1 5l4 4" />
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button"
+                    class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none max-sm:hidden"
+                    data-carousel-next>
+                    <span
+                        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 9 4-4-4-4" />
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
+            </div>
+
+            <div class="flex justify-center items-center">
+                <div
+                    class="p-8 mx-10 leading-8 text-xl text-center text-cyan-950 max-w-4xl shadow-md rounded-lg bg-white ">
+                    <h1 class="text-3xl font-bold mb-6">Un énième voyage prévu à la dernière minute !</h1>
+                    <p class="mb-4">
+                        Quand Monsieur (on l’appellera Guillaume pour plus de facilité) me dit qu’il aimerait bien
+                        bouger à 10 jours des vacances... C’est parti pour une soirée de recherche pour trouver un vol
+                        abordable !
+                        Le Canada, avec un vol direct pour Montréal au départ de Toulouse pour 350 € par personne, «
+                        j’achète » !
+                    </p>
+                    <h2 class="text-2xl font-semibold mb-4">Préparation et motivation</h2>
+                    <p class="mb-4">
+                        Quel plaisir de retrouver cette culture, car oui, ce n’est pas la première fois ! Mon amour pour
+                        le Québec a commencé en 2009, lors d’une colonie de vacances. Donc, je me mets à tout noter pour
+                        lui faire découvrir ce pays où nos cousins ont posé leurs valises.
+                        Pourquoi je dis ‘cousins’ ? Le Québec est une ancienne colonie française qui a été façonnée par
+                        trois peuples : les Indiens, les Français et les Anglais.
+                    </p>
+                    <h2 class="text-2xl font-semibold mb-4">Rencontre familiale</h2>
+                    <p class="mb-4">
+                        En partant là-bas, nous en profitons quand même pour aller voir ma « vraie » cousine expatriée à
+                        Mont-Tremblant depuis 2020. Ce voyage est basé sur un petit road trip, donc j’ai loué une
+                        voiture pour les 10 jours sur place.
+                    </p>
+                    <h2 class="text-2xl font-semibold mb-4">Québec et ses environs</h2>
+                    <p class="mb-4">
+                        Nous prenons le chemin pour Québec et sa vieille ville fortifiée. Je lui fais découvrir les
+                        remparts ainsi que le château Frontenac, qui est également l’hôtel le plus photographié au monde
+                        (normal !).
+                    </p>
+                    <p class="mb-4">
+                        Je découvre également en sa présence l’île d’Orléans qui se trouve à proximité de Québec. Ce
+                        petit bout de terre est magnifique, encore à l'état brut ! Nous pouvons y déguster leur vin
+                        rouge de leurs vignes (spoiler : la France est championne pour ça) et leurs cultures de courges
+                        !
+                        Grâce à la voiture, nous faisons le tour de l’île et profitons encore de la température agréable
+                        du mois de septembre.
+                    </p>
+                    <p class="mb-4">
+                        Avant de quitter Québec, nous en profitons pour crapahuter et observer les chutes de Montmorency
+                        de haut ! Toujours une extase de les voir du bas, mais la vue est imprenable du sommet.
+                    </p>
+                    <h2 class="text-2xl font-semibold mb-4">À la recherche des baleines</h2>
+                    <p class="mb-4">
+                        Ensuite, nous reprenons la route en direction de la baie de Sainte-Catherine et même de la ville
+                        de Tadoussac, réputée pour ses baleines ! Cette ville se situe sur l’estuaire du fleuve
+                        Saint-Laurent et est très touristique. Moi, je veux voir des baleines ! Donc nous montons sur
+                        notre embarcation, et le capitaine part à leur recherche. Ce jour-là, elles ont été timides mais
+                        nous avons quand même pu en apercevoir quelques-unes.
+                    </p>
+                    <h2 class="text-2xl font-semibold mb-4">Découverte de Montréal</h2>
+                    <p class="mb-4">
+                        Nous remontons en voiture et repartons pour Montréal, que nous atteignons le lendemain.
+                        Les places de parking se font rares dans cette ville, nous décidons de privilégier les
+                        transports en commun pour visiter le centre-ville. Cette métropole est moderne et on se sent
+                        moins à l’aise qu’à Québec. Le parc Mont-Royal offre une vue imprenable sur la ville et nous
+                        allons nous immerger dans l’ambiance d’un match de hockey où nous soutenons l’équipe locale : «
+                        Go Habs Go ».
+                    </p>
+                    <h2 class="text-2xl font-semibold mb-4">Conclusion du voyage</h2>
+                    <p class="mb-4">
+                        C’est la fin du périple, mais le Canada m’appelle toujours !
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Flèche pour remonter -->
+        <a href="#" aria-label="haut de page"><i class="fa-solid fa-chevron-up fa-2xl fleche"></i></a>
+    </main>
+
+    <!-- footer -->
+    <footer
+        class="footer flex justify-between items-center text-gray-300 bg-cyan-950 text-neutral-content p-4 max-sm:hidden">
+        <aside class="flex items-center">
+            <svg width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" clip-rule="evenodd"
+                class="fill-current">
+                <path
+                    d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z">
+                </path>
+            </svg>
+            <p class="ml-2">Copyright © 2024 - All right reserved</p>
+        </aside>
+        <nav class="flex gap-4 mr-32 ">
+            <!-- insta -->
+            <a target="_blank" aria-label="instagram"
+                href="https://www.instagram.com/billijoke/?fbclid=IwY2xjawEfHAhleHRuA2FlbQIxMAABHQ8JdnShU68Yayt0JuGWFzvKAC8wGhKaBqWS35tcoadC2V7NyOVOLIWuZQ_aem_442XPFeA-Q7tCShar1DdsQ">
+                <i
+                    class="fill-current fa-brands fa-instagram fa-2xl hover:bg-cyan-800 hover:text-white transition-all"></i>
+                <path
+                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                </path>
+                </svg>
+            </a>
+            <!-- facebook -->
+            <a href="https://www.facebook.com/oceanedosnon" target="_blank" aria-label="facebook">
+                <i class="fa-brands fa-facebook fa-2xl  hover:bg-cyan-800 hover:text-white transition-all"></i>
+                <path
+                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+                </path>
+                </svg>
+            </a>
+            <!-- polarstep -->
+            <a href="https://www.polarsteps.com/billibulle" target="_blank" aria-label="polarstep">
+                <i
+                    class="fa-solid fa-compass fa-rotate-90 fa-2xl hover:bg-cyan-800 hover:text-white transition-all"></i>
+                <path
+                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+                </path>
+                </svg>
+            </a>
+        </nav>
+    </footer>
+
+</body>
+
+
+<script src="../js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+
+
+</html>
